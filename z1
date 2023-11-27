@@ -1,0 +1,17 @@
+var m = prompt("Количество строк M = ");
+var n = prompt("Количество столбцов N = ");
+var matrix = [];
+for(var i = 0; i < m; i++) {
+matrix[i] = [];
+for(var j = 0; j < n; j++) {
+matrix[i][j] = prompt("Введите элемент для строки №" + (i+1) + " и столбца №" + (j+1));
+}
+}
+alert(matrix)
+for (var i = 0; i < Math.floor(m / 2); i++) {
+var x = matrix[i];
+matrix[i] = matrix[m - 1 - i];
+matrix[m - 1 - i] = x;
+}
+alert("Ответ: ")
+alert(matrix) 
